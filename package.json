@@ -5,6 +5,9 @@
    "author": "author's name",
    "license": "MIT",
    "main": "index.js",
+   "engines": {
+      "node": "16.15.1"
+    },
    "scripts": {
       "start": "node server",
       "test": "/usr/local/node_modules/mocha/bin/mocha.js"
