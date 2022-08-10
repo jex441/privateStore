@@ -199,7 +199,7 @@ app.use(
 );
 
 try {
-  //Will delete data from db every time with force: true
+  //Will delete data from db every time with db.sync({force: true})
   db.sync();
   db.authenticate();
   console.log(
