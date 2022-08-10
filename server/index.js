@@ -187,7 +187,7 @@ const port = process.env.PORT_NO;
 const app = express();
 
 app.listen(port);
-console.log(`Running a GraphQL API server at ${port}/graphql`);
+console.log(`Running a GraphQL API server on port ${port}`);
 
 app.use(
   "/graphql",
