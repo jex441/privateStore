@@ -2,7 +2,8 @@
    "name": "testing",
    "version": "0.0.1",
    "engines": {
-      "node": "16.15.1"
+      "node": "16.15.1",
+      "npm": "6"
     },
    "description": "Test opreturn contracts.",
    "author": "author's name",
