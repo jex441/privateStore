@@ -7,7 +7,8 @@ const PullRequest = require("./Models/PullRequest");
 
 // Associations here
 Repo.hasMany(Contributor);
-Repo.hasMany(PullRequest);
+Repo.belongsTo(PullRequest);
+Repo.hasOne(PullRequest);
 PullRequest.hasMany(Vote);
 Contributor.hasMany(Vote);
 Vote.belongsTo(Contributor);
