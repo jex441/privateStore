@@ -199,8 +199,12 @@ app.use(
 );
 
 try {
-  //Will delete data from db every time with force: true
+  // Clear database every time:
+  // db.sync({ force: true });
+
+  // Do not clear database every time:
   db.sync();
+
   db.authenticate();
   console.log(
     "Connection to the Postgres database has been established successfully."
