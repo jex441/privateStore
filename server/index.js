@@ -199,19 +199,11 @@ app.use(
 );
 
 try {
-<<<<<<< HEAD
-  //Will delete data from db on start:
-  db.sync({ force: true });
-
-  //Will not delete data from db on start:
-  // db.sync();
-=======
   // Clear database every time:
   // db.sync({ force: true });
 
   // Do not clear database every time:
   db.sync();
->>>>>>> heroku
 
   db.authenticate();
   console.log(
