@@ -1,7 +1,8 @@
 const superagent = require("superagent");
 require("dotenv").config();
 
-const port = process.env.PORT || "http://localhost:4002";
+// const port = process.env.PORT || "http://localhost:4002";
+const port = "https://privatestore.herokuapp.com";
 
 var root = {
   postCreateUser: async (
