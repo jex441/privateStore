@@ -200,10 +200,10 @@ app.use(
 
 try {
   // Clear database every time:
-  // db.sync({ force: true });
+  db.sync({ force: true });
 
   // Do not clear database every time:
-  db.sync();
+  // db.sync();
 
   db.authenticate();
   console.log(
