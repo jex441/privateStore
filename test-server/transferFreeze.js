@@ -4,7 +4,10 @@ const {
   postTransferTokens,
 } = require("../src/requests");
 
+let snooze_ms = 5000;
+
 describe("postTransferTokens should not function while a vote is taking place", function () {
+  this.timeout(snooze_ms * 12);
   it("should return a message if transfering while vote is open, else transfer as normal", async function () {
     const josephTransfer = await postTransferTokens(
       /*owner*/ "joseph",
