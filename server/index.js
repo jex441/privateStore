@@ -2,6 +2,7 @@ const express = require("express");
 const { graphqlHTTP } = require("express-graphql");
 const { buildSchema } = require("graphql");
 const { db } = require("./db");
+require("dotenv").config();
 
 const {
   createPullRequest,
@@ -181,10 +182,12 @@ var root = {
   },
 };
 
+const port = process.env.PORT || 4002;
+
 const app = express();
 
-app.listen(4002);
-console.log("Running a GraphQL API server at localhost:4002/graphql");
+app.listen(port);
+console.log(`Running a GraphQL API server on port ${port}`);
 
 app.use(
   "/graphql",
@@ -196,11 +199,19 @@ app.use(
 );
 
 try {
+<<<<<<< HEAD
   //Will delete data from db on start:
   db.sync({ force: true });
 
   //Will not delete data from db on start:
   // db.sync();
+=======
+  // Clear database every time:
+  // db.sync({ force: true });
+
+  // Do not clear database every time:
+  db.sync();
+>>>>>>> heroku
 
   db.authenticate();
   console.log(

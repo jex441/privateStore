@@ -6,12 +6,13 @@ services:
     depends_on:
       - db
     ports:
-      - 4000:4002
+      - 4002:4002
     expose:
       - "4002"
     build: ./
     environment:
       DB_URL: postgresql://user:password@db:5432/privatestore
+      PORT: http://localhost:4002
     tty: true
 
   db:
