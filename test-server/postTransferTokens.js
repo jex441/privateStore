@@ -4,7 +4,10 @@ const {
   postTransferTokens,
 } = require("../src/requests");
 
+let snooze_ms = 5000;
+
 describe("postTransferTokens", function () {
+  this.timeout(snooze_ms * 12);
   it("should transfer tokens between two contributors", async function () {
     await postTransferTokens(
       /*owner*/ "joseph",

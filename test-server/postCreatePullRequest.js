@@ -7,7 +7,7 @@ describe("postCreatePullRequest", function () {
       /*owner:*/ "joseph",
       /*repo_id:*/ "joseph/demo",
       /*fork_branch:*/ "pullRequest1",
-      /*pr_id:*/ "issue_1",
+      /*pr_id:*/ "pullRequest1",
       /*title:*/ "refactor: deploy with nix"
     );
 
@@ -15,7 +15,7 @@ describe("postCreatePullRequest", function () {
       /*owner:*/ "joseph",
       /*repo_id:*/ "joseph/demo",
       /*fork_branch:*/ "pullRequest2",
-      /*pr_id:*/ "issue_2",
+      /*pr_id:*/ "pullRequest2",
       /*title:*/ "insert column FAVORITE_COLOR on table CONTRIBUTORS"
     );
 
@@ -23,7 +23,7 @@ describe("postCreatePullRequest", function () {
       /*owner:*/ "joseph",
       /*repo_id:*/ "joseph/demo",
       /*fork_branch:*/ "pullRequest3",
-      /*pr_id:*/ "issue_3",
+      /*pr_id:*/ "pullRequest3",
       /*title:*/ "declare as type: module"
     );
 
@@ -31,29 +31,29 @@ describe("postCreatePullRequest", function () {
       /*owner:*/ "joseph",
       /*repo_id:*/ "joseph/demo",
       /*fork_branch:*/ "pullRequest4",
-      /*pr_id:*/ "issue_4",
+      /*pr_id:*/ "pullRequest4",
       /*title:*/ "implement feature: read receipt"
     );
 
     assert.equal(
       issue_1,
       "201",
-      "Failed to create a pull request issue_1 in the database"
+      "Failed to create a pull request pullRequest1 in the database"
     );
     assert.equal(
       issue_2,
       "201",
-      "Failed to create a pull request issue_2 in the database"
+      "Failed to create a pull request pullRequest2 in the database"
     );
     assert.equal(
       issue_3,
       "201",
-      "Failed to create a pull request issue_3 in the database"
+      "Failed to create a pull request pullRequest3 in the database"
     );
     assert.equal(
       issue_4,
       "201",
-      "Failed to create a pull request issue_4 in the database"
+      "Failed to create a pull request pullRequest4 in the database"
     );
   });
 });

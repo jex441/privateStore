@@ -42,17 +42,20 @@ const PullRequest = db.define(
               { status: "merge" },
               { where: { id: pr.id } }
             );
+            await repo.setPullrequest(null);
           } else {
             await PullRequest.update(
-              { status: "close" },
+              { status: "closed" },
               { where: { id: pr.id } }
             );
+            await repo.setPullrequest(null);
           }
         } else {
           await PullRequest.update(
             { status: "open" },
             { where: { id: pr.id } }
           );
+          await repo.setPullrequest(pr.id);
         }
       },
     },

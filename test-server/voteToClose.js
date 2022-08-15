@@ -120,7 +120,7 @@ describe("Multiple voters vote to close Pull Request 2: pullRequest2", function 
     assert.equal(ignaciusVote, 201, "Fail to add vote to database");
     assert.equal(
       mergeStatus,
-      "close",
+      "closed",
       "Fail to close even though it was voted against."
     );
   });
