@@ -45,12 +45,12 @@ const PullRequest = db.define(
             await repo.setPullrequest(null);
           } else {
             await PullRequest.update(
-              { status: "close" },
+              { status: "closed" },
               { where: { id: pr.id } }
             );
             await repo.setPullrequest(null);
           }
-        } else {
+        } else if (percentVoted > 0.1) {
           await PullRequest.update(
             { status: "open" },
             { where: { id: pr.id } }
