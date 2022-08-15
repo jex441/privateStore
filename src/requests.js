@@ -1,8 +1,11 @@
 const superagent = require("superagent");
 require("dotenv").config();
 
+// Production and remote testing:
 const port = process.env.PORT || "https://privatestore.herokuapp.com";
-// const port = "https://privatestore.herokuapp.com";
+
+// Local testing:
+// const port = "http://localhost:4002";
 
 var root = {
   postCreateUser: async (
