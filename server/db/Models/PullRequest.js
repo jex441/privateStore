@@ -50,7 +50,7 @@ const PullRequest = db.define(
             );
             await repo.setPullrequest(null);
           }
-        } else if (percentVoted > 0.1) {
+        } else {
           await PullRequest.update(
             { status: "open" },
             { where: { id: pr.id } }
