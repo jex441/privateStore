@@ -199,11 +199,11 @@ app.use(
 );
 
 try {
-  // Clear database every time:
-  db.sync({ force: true });
+  // Clear database every time npm start is called:
+  // db.sync({ force: true });
 
-  // Do not clear database every time:
-  // db.sync();
+  // Do not clear database every time npm start is called:
+  db.sync();
 
   db.authenticate();
   console.log(
