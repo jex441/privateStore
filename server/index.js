@@ -28,7 +28,7 @@ var schema = buildSchema(`
   type Query {
     createUser(owner: String, repo: String, contributor_id: String, contributor_name: String, contributor_signature: String): String,
     createRepo(owner: String, repo: String, pr_id: String, contributor_id: String, side: String): String,
-    createPullRequest(owner: String, repo_id: String, pr_id: String, fork_branch: String, title: String): String,
+    createPullRequest(owner: String, repo: String, pr_id: String, fork_branch: String, title: String): String,
     getContributorName(owner: String, repo: String, pr_id: String, contributor_id: String): String,
     getContributorID(owner: String, repo_id: String, pr_id: String, contributor_name: String): String,
     getContributorSignature(owner: String, repo: String, pr_id: String, contributor_name: String): String,
@@ -68,7 +68,7 @@ var root = {
   createPullRequest: async (args) => {
     return await createPullRequest(
       args.owner,
-      args.repo_id,
+      args.repo,
       args.pr_id,
       args.fork_branch,
       args.title

@@ -5,7 +5,7 @@ describe("postCreatePullRequest", function () {
   it("create a pull request associated with the repo_id supplied", async function () {
     const issue_1 = await postCreatePullRequest(
       /*owner:*/ "joseph",
-      /*repo_id:*/ "joseph/demo",
+      /*repo_id:*/ "demo",
       /*fork_branch:*/ "pullRequest1",
       /*pr_id:*/ "pullRequest1",
       /*title:*/ "refactor: deploy with nix"
@@ -13,7 +13,7 @@ describe("postCreatePullRequest", function () {
 
     const issue_2 = await postCreatePullRequest(
       /*owner:*/ "joseph",
-      /*repo_id:*/ "joseph/demo",
+      /*repo_id:*/ "demo",
       /*fork_branch:*/ "pullRequest2",
       /*pr_id:*/ "pullRequest2",
       /*title:*/ "insert column FAVORITE_COLOR on table CONTRIBUTORS"
@@ -21,7 +21,7 @@ describe("postCreatePullRequest", function () {
 
     const issue_3 = await postCreatePullRequest(
       /*owner:*/ "joseph",
-      /*repo_id:*/ "joseph/demo",
+      /*repo_id:*/ "demo",
       /*fork_branch:*/ "pullRequest3",
       /*pr_id:*/ "pullRequest3",
       /*title:*/ "declare as type: module"
@@ -29,7 +29,7 @@ describe("postCreatePullRequest", function () {
 
     const issue_4 = await postCreatePullRequest(
       /*owner:*/ "joseph",
-      /*repo_id:*/ "joseph/demo",
+      /*repo_id:*/ "demo",
       /*fork_branch:*/ "pullRequest4",
       /*pr_id:*/ "pullRequest4",
       /*title:*/ "implement feature: read receipt"

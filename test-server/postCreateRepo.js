@@ -5,7 +5,7 @@ describe("postCreateRepo", function () {
   it("should create a repo and return a status code of 201", async function () {
     const repo = await postCreateRepo(
       "joseph",
-      "joseph/demo",
+      "demo",
       "",
       "0x0c0DDaD894E3436C34AecD5722F0798Da88Bc971",
       ""
@@ -13,7 +13,7 @@ describe("postCreateRepo", function () {
 
     const repo1 = await postCreateRepo(
       "michael",
-      "michael/demo",
+      "demo",
       "",
       "0x0c55D3B26A1229B9D707a4272F55E66103301858",
       ""

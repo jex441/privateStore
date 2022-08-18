@@ -40,7 +40,7 @@ var root = {
   },
   postCreatePullRequest: async (
     /*owner:*/ owner,
-    /*repo_id:*/ repo_id,
+    /*repo_id:*/ repo,
     /*fork_branch:*/ fork_branch,
     /*pr_id:*/ pr_id,
     /*title:*/ title
@@ -48,7 +48,7 @@ var root = {
     const res = await superagent
       .post(`${port}/graphql`)
       .send({
-        query: `{ createPullRequest(owner: "${owner}", repo_id: "${repo_id}", fork_branch: "${fork_branch}", pr_id: "${pr_id}", title: "${title}") }`,
+        query: `{ createPullRequest(owner: "${owner}", repo: "${repo}", fork_branch: "${fork_branch}", pr_id: "${pr_id}", title: "${title}") }`,
       })
       .set("accept", "json");
 
