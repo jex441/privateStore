@@ -3,7 +3,7 @@ const { Sequelize } = require("sequelize");
 const dbUrl = process.env.DB_URL || "postgres://localhost:5432/privatestore";
 
 const config = {
-  logging: true,
+  logging: console.log,
 };
 
 //https://stackoverflow.com/questions/61254851/heroku-postgres-sequelize-no-pg-hba-conf-entry-for-host
