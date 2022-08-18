@@ -123,7 +123,7 @@ var root = {
   },
   postGetContributorTokenAmount: async (
     owner,
-    repo_id,
+    repo,
     pr_id,
     contributor_id,
     side
@@ -131,7 +131,7 @@ var root = {
     const res = await superagent
       .post(`${port}/graphql`)
       .send({
-        query: `{ getContributorTokenAmount(owner: "${owner}", repo_id: "${repo_id}", pr_id: "${pr_id}", contributor_id: "${contributor_id}", side: "${side}") }`,
+        query: `{ getContributorTokenAmount(owner: "${owner}", repo: "${repo}", pr_id: "${pr_id}", contributor_id: "${contributor_id}", side: "${side}") }`,
       }) // sends a JSON post body
       .set("accept", "json");
     //.end((err, res) => {
@@ -140,11 +140,11 @@ var root = {
     const json = JSON.parse(res.text);
     return json.data.getContributorTokenAmount;
   },
-  postTransferTokens: async (owner, repo_id, from, to, amount) => {
+  postTransferTokens: async (owner, repo, from, to, amount) => {
     const res = await superagent
       .post(`${port}/graphql`)
       .send({
-        query: `{ transferTokens(owner: "${owner}", repo_id: "${repo_id}", from: "${from}", to: "${to}", amount: "${amount}") }`,
+        query: `{ transferTokens(owner: "${owner}", repo: "${repo}", from: "${from}", to: "${to}", amount: "${amount}") }`,
       }) // sends a JSON post body
       .set("accept", "json");
     //   .end((err, res) => {
